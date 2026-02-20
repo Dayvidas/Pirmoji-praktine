@@ -66,5 +66,28 @@ int main()
             cout << "Jus gausite " << fixed << setprecision(2) <<kiekis*INR_Pirkti << " INR" <<endl;
         }
      }
+      else if (Pasirinkimas1==3){
+        cout << "Pasirinkite norima valiuta pakeisti - 1.GBP/2.USD/3.INR : ";
+        cin>>valiutapirkti;
+        cout<<endl;
+        if (valiutapirkti==1){
+            cout << "Pasirinkite norima GPB kieki iskeisti: ";
+            cin>>kiekis;
+            cout<<endl;
+            cout << "Jus gausite " << fixed << setprecision(2) <<GBP_Parduoti/kiekis << " EUR" <<endl;
+        }
+        else if (valiutapirkti==2){
+            cout << "Pasirinkite norima USD kieki iskeisti: ";
+            cin>>kiekis;
+            cout<<endl;
+            cout << "Jus gausite " << fixed << setprecision(2) <<USD_Parduoti/kiekis << " EUR" <<endl;
+        }
+        else if (valiutapirkti==3){
+            cout << "Pasirinkite norima INR kieki iskeisti: ";
+            cin>>kiekis;
+            cout<<endl;
+            cout << "Jus gausite " << fixed << setprecision(2) <<INR_Parduoti/kiekis << " EUR" <<endl;
+        }
+    }
     return 0;
 }
