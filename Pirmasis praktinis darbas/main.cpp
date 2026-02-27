@@ -19,10 +19,12 @@ int main()
     double kiekis;
     int valiutapirkti;
     int Pasirinkimas2;
+    while(true){
     cout << "Veiksmai:"<<endl;
     cout << "1. Palyginti valiuta"<<endl;
     cout << "2. Pirkti valiuta"<<endl;
     cout << "3. Parduoti valiuta"<<endl;
+    cout << "4. Iseiti"<<endl;
     cout << "Pasirinkite veiksma: ";
     cin >> Pasirinkimas1;
     cout<<endl;
@@ -41,6 +43,10 @@ int main()
         }
         else if (Pasirinkimas2==3){
             cout<<"1 EUR = "<< fixed << setprecision(2) << INR_Bendras << "INR" << endl;
+        }
+        else {
+            cout<<"Pasirinkite teisinga veiksma"<<endl;
+            continue;
         }
     }
      else if (Pasirinkimas1==2){
@@ -65,6 +71,10 @@ int main()
             cout<<endl;
             cout << "Jus gausite " << fixed << setprecision(2) <<kiekis*INR_Pirkti << " INR" <<endl;
         }
+        else {
+            cout<<"Pasirinkite teisinga veiksma"<<endl;
+            continue;
+        }
      }
       else if (Pasirinkimas1==3){
         cout << "Pasirinkite norima valiuta pakeisti - 1.GBP/2.USD/3.INR : ";
@@ -74,19 +84,31 @@ int main()
             cout << "Pasirinkite norima GPB kieki iskeisti: ";
             cin>>kiekis;
             cout<<endl;
-            cout << "Jus gausite " << fixed << setprecision(2) <<GBP_Parduoti/kiekis << " EUR" <<endl;
+            cout << "Jus gausite " << fixed << setprecision(2) <<kiekis/GBP_Parduoti << " EUR" <<endl;
         }
         else if (valiutapirkti==2){
             cout << "Pasirinkite norima USD kieki iskeisti: ";
             cin>>kiekis;
             cout<<endl;
-            cout << "Jus gausite " << fixed << setprecision(2) <<USD_Parduoti/kiekis << " EUR" <<endl;
+            cout << "Jus gausite " << fixed << setprecision(2) <<kiekis/USD_Parduoti << " EUR" <<endl;
         }
         else if (valiutapirkti==3){
             cout << "Pasirinkite norima INR kieki iskeisti: ";
             cin>>kiekis;
             cout<<endl;
-            cout << "Jus gausite " << fixed << setprecision(2) <<INR_Parduoti/kiekis << " EUR" <<endl;
+            cout << "Jus gausite " << fixed << setprecision(2) <<kiekis/INR_Parduoti << " EUR" <<endl;
+        }
+        else {
+            cout<<"Pasirinkite teisinga veiksma"<<endl;
+            continue;
+        }
+    }
+    else if (Pasirinkimas1==4){
+        break;
+    }
+    else {
+            cout<<"Pasirinkite teisinga veiksma"<<endl;
+            continue;
         }
     }
     return 0;
